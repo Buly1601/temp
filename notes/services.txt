@@ -1,0 +1,6 @@
+Not like a topic, a service is one-time communication
+Client sends a request, then the server sends back a response. (Synchronous communication)
+
+Use when:
+- Request the robot to perform a specific action
+

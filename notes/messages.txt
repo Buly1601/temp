@@ -1,0 +1,31 @@
+Every message is composed by pkg name and msg type (pkg_name/msg_type) -> (std_msgs/String)
+Example of type and field (in Twist)
+Vector 3 --- linear
+Vector 3 --- angular
+
+ ---- Create custom message ---- 
+1. Add it into folder "msg" (has to be created inside the pkg folder)
+In the folder, add a .msg file containing the information of the message (type and field):
+int32 id
+string name
+float32 temperature
+float32 humidity
+
+2. Update Dependencies in CMakeLists.txt (local not catkin one) add:
+find_package(catkin REQUIRED COMPONENTS
+roscpp
+rospy
+std_msgs
+new_meeesage
+)
+
+3. Add name of file in CMakeLists.txt add (just update the add_messge_files already in file):
+add_message_files(
+FILES
+message.msg
+)
+
+4. Update dependencies in package.xml, add:
+<build_depend>message_generation</build_depend>
+...
+<exec_depend>message_runtime</build_depend>

@@ -1,0 +1,5 @@
+Step 1: Identify the name of the topic to listen
+Step 2: Identufy the type of the messages to receive
+Step 3: Define a callback function that will be automatically executed when a new message is received on the topic.
+Step 4: Start listening for the topic messages.
+Step 5: Spin to listen forever (C++)
